@@ -1,4 +1,13 @@
+---
+date: 2026-07-22
+type: documentation
+tags: [potager, site, deploiement, hebergement, technique, interne]
+domaine: projet1-service-potager
+---
+
 # Déploiement du site Potager d'Azur
+
+> **État au 2026-07-22 : le site est EN LIGNE sur potagerdazur.fr, hébergé sur GitHub Pages** (fichier `CNAME` de ce dossier, DNS vérifié : www → nexia-code.github.io, apex → IP GitHub Pages 185.199.108-111.153). Le comparatif ci-dessous et la recommandation Netlify sont l'historique de préparation d'avant mise en ligne, conservés pour référence en cas de changement d'hébergeur.
 
 Ce dossier est un site statique complet (6 pages HTML, dossier images/, sitemap.xml, robots.txt). Aucun backend, aucune base de données : n'importe quel hébergeur statique le sert tel quel. Ce document compare trois hébergeurs gratuits et donne la procédure DNS pas à pas.
 
@@ -63,3 +72,9 @@ Règle de sécurité valable partout : ne téléverser QUE le contenu de ce doss
 ## Ce que ce document ne contient volontairement pas
 
 Aucun identifiant, aucun mot de passe, aucune donnée interne (prix d'achat, marques fournisseurs, marges). Les comptes créés (registrar, Netlify, Search Console) restent sous le contrôle exclusif de Romain.
+
+## Liens
+- Index catalogue : [[index-catalogues-fournisseurs]]
+- Plan du site : [[plan-site-potager-azur]]
+- MOC : [[MOC — Projet 1 — Service Potager]]
+- MOC : [[MOC — Marketing Digital]]
