@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://DOMAINE-A-REMPLACER/index.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://potagerdazur.fr/index.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://DOMAINE-A-REMPLACER/catalogue.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://potagerdazur.fr/catalogue.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://DOMAINE-A-REMPLACER/devis.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://potagerdazur.fr/devis.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://DOMAINE-A-REMPLACER/faq.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://potagerdazur.fr/faq.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://DOMAINE-A-REMPLACER/contact.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://potagerdazur.fr/contact.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://DOMAINE-A-REMPLACER/mentions-legales.html</loc>
-    <lastmod>2026-07-21</lastmod>
+    <loc>https://potagerdazur.fr/mentions-legales.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>

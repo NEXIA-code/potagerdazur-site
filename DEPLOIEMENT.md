@@ -9,9 +9,11 @@ domaine: projet1-service-potager
 
 > **État au 2026-07-22 : le site est EN LIGNE sur potagerdazur.fr, hébergé sur GitHub Pages** (fichier `CNAME` de ce dossier, DNS vérifié : www → nexia-code.github.io, apex → IP GitHub Pages 185.199.108-111.153). Le comparatif ci-dessous et la recommandation Netlify sont l'historique de préparation d'avant mise en ligne, conservés pour référence en cas de changement d'hébergeur.
 
-Ce dossier est un site statique complet (6 pages HTML, dossier images/, sitemap.xml, robots.txt). Aucun backend, aucune base de données : n'importe quel hébergeur statique le sert tel quel. Ce document compare trois hébergeurs gratuits et donne la procédure DNS pas à pas.
+Ce dossier est un site statique complet (6 pages HTML, styles.css, site.js, dossier images/, sitemap.xml, robots.txt). Aucun backend, aucune base de données : n'importe quel hébergeur statique le sert tel quel. Ce document compare trois hébergeurs gratuits et donne la procédure DNS pas à pas.
 
-## Étape 0, avant toute mise en ligne
+> **Refonte 2026-07-23 : TOUTES les pages HTML, styles.css, site.js, sitemap.xml et robots.txt sont générés par `Assets/scripts/build-catalogue-client.py`** (devis.html et faq.html compris, ils divergeaient du reste). Toute modification passe par le script puis `python3 build-catalogue-client.py`, jamais par une édition directe des fichiers générés. Le domaine `https://potagerdazur.fr` est intégré au générateur (constante `DOMAINE`) : le jeton `DOMAINE-A-REMPLACER` du point 1 ci-dessous n'existe plus, il est conservé pour l'historique. Le bloc Hébergement des mentions légales est renseigné (GitHub Pages) : vérifier s'il faut y ajouter un numéro de téléphone d'hébergeur (LCEN).
+
+## Étape 0, avant toute mise en ligne (historique, site déjà en ligne)
 
 1. Remplacer le jeton de domaine. Les fichiers contiennent le texte `DOMAINE-A-REMPLACER` (balises canonical, og:url, og:image, sitemap.xml, robots.txt). Une fois le domaine acheté (exemple : potagerdazur.fr), lancer dans ce dossier :
 

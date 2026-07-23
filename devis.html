@@ -5,90 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simulateur de devis : Potager d'Azur, potager en bac installé chez vous</title>
 <meta name="description" content="Estimez en ligne le prix de votre potager en bac installé à domicile dans les Alpes-Maritimes : pack, deuxième bac, arrosage automatique. Devis indicatif, confirmé après visite.">
-<link rel="canonical" href="https://DOMAINE-A-REMPLACER/devis.html">
+<link rel="canonical" href="https://potagerdazur.fr/devis.html">
 <meta property="og:site_name" content="Potager d'Azur">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Simulateur de devis : Potager d'Azur">
-<meta property="og:description" content="Estimez en ligne le prix de votre potager en bac installé à domicile dans les Alpes-Maritimes. Devis indicatif, confirmé après visite.">
-<meta property="og:url" content="https://DOMAINE-A-REMPLACER/devis.html">
-<meta property="og:image" content="https://DOMAINE-A-REMPLACER/images/jardiniere-sur-pieds-ergonomique.jpg">
+<meta property="og:title" content="Simulateur de devis : Potager d'Azur, potager en bac installé chez vous">
+<meta property="og:description" content="Estimez en ligne le prix de votre potager en bac installé à domicile dans les Alpes-Maritimes : pack, deuxième bac, arrosage automatique. Devis indicatif, confirmé après visite.">
+<meta property="og:url" content="https://potagerdazur.fr/devis.html">
+<meta property="og:image" content="https://potagerdazur.fr/images/jardiniere-sur-pieds-ergonomique.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232D6A2D'/%3E%3Cpath d='M16 26 V13 M16 17 C10 15 8 10 9 7 C14 8 16 12 16 17 M16 14 C22 12 24 8 23 5 C18 6 16 9 16 14' stroke='%23EBF5EB' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-<style>
-:root{--vert:#2D6A2D;--vert-bg:#EBF5EB;--terre:#7A5C2A;--terre-bg:#F5EEE3;--ciel:#2563A8;
---or:#B45309;--or-bg:#FEF3C7;--text:#1C1C1C;--text-light:#666;--border:#E0DDD8;--bg:#F8F7F4;
---white:#FFF;--radius:10px;--shadow:0 2px 12px rgba(0,0,0,.08)}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-color:var(--text);background:var(--bg);line-height:1.6}
-a{color:var(--vert)}
-header.site{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border);
-box-shadow:var(--shadow)}
-.hwrap{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.logo{font-size:1.25rem;font-weight:700;color:var(--vert);text-decoration:none}
-.logo small{display:block;font-size:.72rem;font-weight:400;color:var(--text-light);letter-spacing:.4px}
-nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
-nav.main a{text-decoration:none;padding:7px 13px;border-radius:20px;font-size:.92rem;color:var(--text)}
-nav.main a:hover{background:var(--vert-bg)}
-nav.main a.actif{background:var(--vert);color:var(--white)}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-.hero{background:linear-gradient(160deg,var(--vert-bg),var(--bg) 70%);padding:44px 0 32px}
-.hero h1{font-size:clamp(1.4rem,4vw,2.1rem);color:var(--vert);line-height:1.25;max-width:760px}
-.hero p{max-width:680px;margin-top:12px;font-size:1.02rem}
-.btn{display:inline-block;background:var(--vert);color:var(--white);text-decoration:none;
-padding:12px 26px;border-radius:26px;font-weight:600;margin-top:20px}
-.btn.sec{background:var(--white);color:var(--vert);border:2px solid var(--vert)}
-.simu{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start;padding:30px 0 10px}
-fieldset{border:0;margin-bottom:26px}
-legend{font-size:1.2rem;font-weight:700;color:var(--vert);margin-bottom:4px}
-.aide{color:var(--text-light);font-size:.9rem;margin-bottom:14px;max-width:620px}
+<link rel="stylesheet" href="styles.css">
+<style>.simu{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start;padding:32px 0 8px}
+fieldset{border:0;margin-bottom:28px}
+legend{font-size:1.2rem;font-weight:700;color:var(--vert-fonce);margin-bottom:4px;letter-spacing:-.01em}
+.aide{color:var(--text-2);font-size:.9rem;margin-bottom:16px;max-width:620px}
 .packs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
 .opt{position:relative;display:block;background:var(--white);border:2px solid var(--border);
-border-radius:var(--radius);padding:15px 16px;cursor:pointer;box-shadow:var(--shadow)}
+border-radius:var(--r-m);padding:15px 16px;cursor:pointer;box-shadow:var(--sh-1);
+transition:border-color .15s ease,background .15s ease}
 .opt input{position:absolute;opacity:0;width:1px;height:1px}
 .opt:hover{border-color:var(--vert)}
 .opt.coche{border-color:var(--vert);background:var(--vert-bg)}
 .opt:focus-within{outline:3px solid var(--ciel);outline-offset:2px}
-.opt h3{font-size:1rem;line-height:1.35;padding-right:60px}
-.opt p{font-size:.86rem;color:#333;margin-top:5px}
-.opt .prix{position:absolute;top:13px;right:15px;font-size:1.05rem;font-weight:700;color:var(--vert)}
-.opt .prix small{display:block;font-size:.68rem;font-weight:400;color:var(--text-light);text-align:right}
+.opt h3{font-size:1rem;line-height:1.35;padding-right:64px}
+.opt p{font-size:.86rem;color:#3E3E38;margin-top:5px}
+.opt .prix{position:absolute;top:13px;right:15px;font-size:1.05rem;font-weight:700;
+color:var(--text);margin-top:0;padding-top:0}
+.opt .prix small{display:block;font-size:.68rem;font-weight:400;color:var(--text-2);text-align:right}
 .ligne{margin-bottom:12px}
-.recap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
-padding:22px 24px;box-shadow:var(--shadow);position:sticky;top:86px}
-.recap h2{font-size:1.15rem;color:var(--vert);margin-bottom:12px}
+.recap{background:var(--white);border:1px solid var(--border);border-radius:var(--r-m);
+padding:22px 24px;box-shadow:var(--sh-1);position:sticky;top:calc(var(--h-header) + 16px)}
+.recap h2{font-size:1.15rem;color:var(--vert-fonce);margin-bottom:12px}
 .recap table{width:100%;border-collapse:collapse;font-size:.92rem}
 .recap td{padding:6px 0;border-bottom:1px solid var(--border);vertical-align:top}
 .recap td:last-child{text-align:right;white-space:nowrap;font-weight:600}
 .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;gap:10px}
 .total .lib{font-weight:700}
-.total .val{font-size:1.7rem;font-weight:700;color:var(--vert)}
+.total .val{font-size:1.7rem;font-weight:700;color:var(--vert-fonce)}
 .mensuel{display:flex;justify-content:space-between;font-size:.95rem;margin-top:4px;color:var(--terre)}
 .mensuel[hidden]{display:none}
 .mensuel strong{white-space:nowrap}
-.indicatif{background:var(--or-bg);border-radius:8px;padding:10px 14px;font-size:.84rem;margin-top:16px}
-.recap .btn{display:block;text-align:center;margin-top:16px}
-.recap .tel{display:block;text-align:center;font-size:.9rem;margin-top:10px}
-.note{background:var(--or-bg);border-radius:var(--radius);padding:16px 20px;font-size:.92rem;margin:26px 0}
-footer.site{margin-top:50px;background:#20301F;color:#D8E4D6;padding:36px 0 30px;font-size:.9rem}
-footer.site a{color:#BFE3BC}
-footer.site .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
-footer.site h4{color:var(--white);margin-bottom:8px;font-size:1rem}
-.legal{margin-top:22px;padding-top:16px;border-top:1px solid #3A4E38;grid-column:1/-1;
-color:#A9BCA6;font-size:.8rem}
-@media (max-width:860px){
-.simu{grid-template-columns:1fr}
-.recap{position:static}
-}
-@media (max-width:700px){
-nav.main a{padding:11px 16px}
-.opt{padding:17px 16px}
-}
+.indicatif{background:var(--note-bg);border:1px solid var(--note-bord);border-radius:var(--r-s);
+padding:10px 14px;font-size:.84rem;margin-top:16px}
+.recap .btn{display:flex;margin-top:16px}
+.recap .tel{display:block;text-align:center;font-size:.9rem;margin-top:12px}
+@media (max-width:860px){.simu{grid-template-columns:1fr}.recap{position:static}}
 </style>
 </head>
 <body>
-<header class="site"><div class="hwrap"><a class="logo" href="index.html">Potager d'Azur<small>Potagers en bacs, clé en main, Alpes-Maritimes</small></a><nav class="main" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="catalogue.html">Catalogue</a><a href="devis.html" class="actif" aria-current="page">Devis</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></nav></div></header>
-<div class="hero"><div class="wrap">
+<header class="site"><div class="hwrap"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2D6A2D"/><path d="M16 26 V13 M16 17 C10 15 8 10 9 7 C14 8 16 12 16 17 M16 14 C22 12 24 8 23 5 C18 6 16 9 16 14" stroke="#EBF5EB" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><span class="lname">Potager d'Azur<small>Potagers en bacs, Alpes-Maritimes</small></span></a><button id="nav-toggle" aria-expanded="false" aria-controls="nav-principal" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><nav class="main" id="nav-principal" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="catalogue.html">Catalogue</a><a href="devis.html" class="actif" aria-current="page">Devis</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></nav></div></header>
+<div class="hero mince"><div class="wrap">
 <h1>Estimez le prix de votre potager installé chez vous</h1>
 <p>Choisissez un pack et vos options : le montant se met à jour instantanément. Livraison,
 substrat sans tourbe, plants et installation à domicile sont toujours inclus dans le prix du pack
@@ -156,18 +122,18 @@ du CGI, prix TTC. Livraison et installation incluses dans les Alpes-Maritimes.</
 </div>
 <footer class="site"><div class="wrap">
 <div><h4>Potager d'Azur</h4><p>Installation et entretien de potagers en bacs à domicile.
-Basé à La Colle-sur-Loup, interventions dans les Alpes-Maritimes.</p></div>
+Choix du bac, substrat sans tourbe, plants adaptés au climat, conseils de démarrage.</p></div>
+<div><h4>Zone d'intervention</h4><p>La Colle-sur-Loup, Villeneuve-Loubet, Cagnes-sur-Mer,
+Vence, Saint-Paul-de-Vence et communes voisines des Alpes-Maritimes.</p></div>
 <div><h4>Contact</h4><p>Téléphone : <a href="tel:+33652946435">06 52 94 64 35</a><br>
 Appel ou SMS, réponse rapide.</p></div>
-<div><h4>Informations</h4><p><a href="catalogue.html">Catalogue</a><br>
-<a href="devis.html">Simulateur de devis</a><br>
-<a href="faq.html">Questions fréquentes</a><br>
-<a href="mentions-legales.html">Mentions légales</a></p></div>
+<div><h4>Informations</h4><p><a href="catalogue.html">Catalogue</a><br><a href="devis.html">Simulateur de devis</a><br><a href="faq.html">Questions fréquentes</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p></div>
 <div class="legal">Romain Dalon, entrepreneur individuel. SIRET 106 710 098 00018.
 TVA non applicable, article 293 B du CGI. Prix TTC.</div>
 </div></footer>
-<script>
-(function(){
+
+<script src="site.js" defer></script>
+<script>(function(){
 "use strict";
 var form=document.getElementById('form-devis');
 var lignes=document.getElementById('recap-lignes');
@@ -175,7 +141,7 @@ var elTotal=document.getElementById('total');
 var elMensuel=document.getElementById('ligne-mensuel');
 var elCourt=document.getElementById('recap-court');
 var elPrixBac2=document.getElementById('prix-bac2');
-function euros(n){return n.toLocaleString('fr-FR')+' €';}
+function euros(n){return n.toLocaleString('fr-FR')+' €';}
 function packChoisi(){
   var r=form.querySelector('input[name="pack"]:checked');
   return {prix:parseInt(r.dataset.prix,10),nom:r.dataset.nom};
@@ -196,7 +162,7 @@ function calcule(){
   var html='<tr><td>Pack '+p.nom+'</td><td>'+euros(p.prix)+'</td></tr>';
   var court='Pack '+p.nom;
   if(bac2){total+=p.prix-30;
-    html+='<tr><td>2e bac identique (30 € de réduction)</td><td>'+euros(p.prix-30)+'</td></tr>';
+    html+='<tr><td>2e bac identique (30 € de réduction)</td><td>'+euros(p.prix-30)+'</td></tr>';
     court+=', 2 bacs';}
   if(arrosage){total+=99;
     html+='<tr><td>Arrosage automatique posé</td><td>'+euros(99)+'</td></tr>';
