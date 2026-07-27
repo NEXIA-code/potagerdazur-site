@@ -53,7 +53,17 @@ font-size:.78rem;color:var(--text-2);font-weight:600}
 padding:10px 14px;font-size:.84rem;margin-top:16px}
 .recap .btn{display:flex;margin-top:16px}
 .recap .tel{display:block;text-align:center;font-size:.9rem;margin-top:12px}
-@media (max-width:860px){.simu{grid-template-columns:1fr}.recap{position:static}}
+.devis-sticky{display:none}
+@media (max-width:860px){
+.simu{grid-template-columns:1fr}
+.recap{position:static}
+body{padding-bottom:76px}
+.devis-sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;
+background:var(--white);border-top:1px solid var(--border);padding:10px 16px;
+gap:14px;align-items:center;box-shadow:0 -4px 16px rgba(0,0,0,.1)}
+.devis-sticky .val{font-size:1.25rem;font-weight:700;color:var(--vert-fonce);white-space:nowrap}
+.devis-sticky .btn{flex:1;justify-content:center;padding:0 20px;min-height:44px}
+}
 /* ---- détail du pack sélectionné : contenu + plan de plantation ---- */
 .pack-detail{background:var(--white);border:1px solid var(--border);border-radius:var(--r-m);
 padding:22px 24px 24px;margin:18px 0 30px;box-shadow:var(--sh-1)}
@@ -213,6 +223,10 @@ du CGI, prix TTC. Livraison et installation incluses dans les Alpes-Maritimes.</
 </aside>
 </form>
 </div>
+<div class="devis-sticky">
+<span class="val" id="total-mobile">390&nbsp;€</span>
+<a class="btn" href="contact.html">Demander ce devis</a>
+</div>
 </main>
 <footer class="site"><div class="wrap">
 <div><h4>Potager d'Azur</h4><p>Installation et entretien de potagers en bacs à domicile.
@@ -232,6 +246,7 @@ TVA non applicable, article 293 B du CGI. Prix TTC.</div>
 var form=document.getElementById('form-devis');
 var lignes=document.getElementById('recap-lignes');
 var elTotal=document.getElementById('total');
+var elTotalMobile=document.getElementById('total-mobile');
 var elMensuel=document.getElementById('ligne-mensuel');
 var elCourt=document.getElementById('recap-court');
 var elPrixBac2=document.getElementById('prix-bac2');
@@ -270,6 +285,7 @@ function calcule(){
   if(entretien){court+=', entretien mensuel';}
   lignes.innerHTML=html;
   elTotal.textContent=euros(total);
+  elTotalMobile.textContent=euros(total);
   elMensuel.hidden=!entretien;
   elCourt.textContent=court;
   majCoche();
