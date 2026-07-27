@@ -65,8 +65,16 @@ if(ov){
   btnFermer.addEventListener('click',fermer);
   ov.addEventListener('click',function(e){if(e.target===ov)fermer();});
   document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'&&ov.classList.contains('ouvert'))fermer();
-  });
+    if(!ov.classList.contains('ouvert'))return;
+    if(e.key==='Escape'){fermer();return;}
+    if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,[href],input,select,textarea,summary,[tabindex]:not([tabindex="-1"])');
+    var liste=Array.prototype.filter.call(f,function(el){return el.offsetParent!==null;});
+    if(!liste.length)return;
+    var premier=liste[0],dernier=liste[liste.length-1];
+    if(e.shiftKey&&document.activeElement===premier){e.preventDefault();dernier.focus();}
+    else if(!e.shiftKey&&document.activeElement===dernier){e.preventDefault();premier.focus();}
+  },true);
 }
 /* catalogue : filtre par catégorie + recherche + tri par prix */
 var barre=document.getElementById('filtres-cats');

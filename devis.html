@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simulateur de devis : Potager d'Azur, potager en bac installé chez vous</title>
-<meta name="description" content="Estimez en ligne le prix de votre potager en bac installé à domicile dans les Alpes-Maritimes : pack, deuxième bac, arrosage automatique. Devis indicatif, confirmé après visite.">
+<meta name="description" content="Estimez en ligne le prix de votre potager en bac installé à domicile dans les Alpes-Maritimes : pack, options, devis indicatif confirmé après visite.">
 <link rel="canonical" href="https://potagerdazur.fr/devis.html">
 <meta property="og:site_name" content="Potager d'Azur">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Simulateur de devis : Potager d'Azur, potager en bac installé chez vous">
-<meta property="og:description" content="Estimez en ligne le prix de votre potager en bac installé à domicile dans les Alpes-Maritimes : pack, deuxième bac, arrosage automatique. Devis indicatif, confirmé après visite.">
+<meta property="og:description" content="Estimez en ligne le prix de votre potager en bac installé à domicile dans les Alpes-Maritimes : pack, options, devis indicatif confirmé après visite.">
 <meta property="og:url" content="https://potagerdazur.fr/devis.html">
 <meta property="og:image" content="https://potagerdazur.fr/images/jardiniere-sur-pieds-ergonomique.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232D6A2D'/%3E%3Cpath d='M16 26 V13 M16 17 C10 15 8 10 9 7 C14 8 16 12 16 17 M16 14 C22 12 24 8 23 5 C18 6 16 9 16 14' stroke='%23EBF5EB' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -38,6 +38,9 @@ color:var(--text);margin-top:0;padding-top:0}
 padding:22px 24px;box-shadow:var(--sh-1);position:sticky;top:calc(var(--h-header) + 16px)}
 .recap h2{font-size:1.15rem;color:var(--vert-fonce);margin-bottom:12px}
 .recap table{width:100%;border-collapse:collapse;font-size:.92rem}
+.recap th{padding:0 0 6px;border-bottom:1px solid var(--border);text-align:left;
+font-size:.78rem;color:var(--text-2);font-weight:600}
+.recap th:last-child{text-align:right}
 .recap td{padding:6px 0;border-bottom:1px solid var(--border);vertical-align:top}
 .recap td:last-child{text-align:right;white-space:nowrap;font-weight:600}
 .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;gap:10px}
@@ -196,6 +199,8 @@ la visite.</div>
 <aside class="recap" aria-live="polite">
 <h2>Votre estimation</h2>
 <table>
+<caption class="sr-only">Détail du prix selon le pack et les options choisies</caption>
+<thead><tr><th scope="col">Poste</th><th scope="col">Prix</th></tr></thead>
 <tbody id="recap-lignes"></tbody>
 </table>
 <div class="total"><span class="lib">Total installation</span><span class="val" id="total">390&nbsp;€</span></div>
