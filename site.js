@@ -58,6 +58,7 @@ if(ov){
       ouvrir(c);
     });
     c.addEventListener('keydown',function(e){
+      if(e.target.closest('summary'))return;
       if(e.key==='Enter'||e.key===' '){e.preventDefault();ouvrir(c);}
     });
   });

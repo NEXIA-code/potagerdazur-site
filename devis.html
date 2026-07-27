@@ -28,8 +28,8 @@ transition:border-color .15s ease,background .15s ease}
 .opt:hover{border-color:var(--vert)}
 .opt.coche{border-color:var(--vert);background:var(--vert-bg)}
 .opt:focus-within{outline:3px solid var(--ciel);outline-offset:2px}
-.opt h3{font-size:1rem;line-height:1.35;padding-right:64px}
-.opt p{font-size:.86rem;color:#3E3E38;margin-top:5px}
+.opt h2{font-size:1rem;line-height:1.35;padding-right:64px}
+.opt p{font-size:.86rem;color:#3E3E38;margin-top:5px;padding-right:64px}
 .opt .prix{position:absolute;top:13px;right:15px;font-size:1.05rem;font-weight:700;
 color:var(--text);margin-top:0;padding-top:0}
 .opt .prix small{display:block;font-size:.68rem;font-weight:400;color:var(--text-2);text-align:right}
@@ -78,7 +78,9 @@ ol.pd-legende{grid-template-columns:1fr 1fr;gap:6px 10px;font-size:.84rem}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 <header class="site"><div class="hwrap"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2D6A2D"/><path d="M16 26 V13 M16 17 C10 15 8 10 9 7 C14 8 16 12 16 17 M16 14 C22 12 24 8 23 5 C18 6 16 9 16 14" stroke="#EBF5EB" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><span class="lname">Potager d'Azur<small>Potagers en bacs, Alpes-Maritimes</small></span></a><button id="nav-toggle" aria-expanded="false" aria-controls="nav-principal" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><nav class="main" id="nav-principal" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="catalogue.html">Catalogue</a><a href="devis.html" class="actif" aria-current="page">Devis</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></nav></div></header>
+<main id="contenu">
 <div class="hero ph mince"><img src="images/ambiance/devis-bac-carre.webp" alt="Carré potager en bois fraîchement planté au soleil" width="1600" height="700" fetchpriority="high"><div class="wrap"><h1>Estimez le prix de votre potager installé chez vous</h1><p>Choisissez un pack et vos options : le montant se met à jour instantanément. Livraison, substrat sans tourbe, plants et installation à domicile sont toujours inclus dans le prix du pack (zone Alpes-Maritimes). TVA non applicable, prix TTC.</p></div></div><div class="wrap">
 <form class="simu" id="form-devis">
 <div>
@@ -89,19 +91,19 @@ des Alpes-Maritimes, la livraison et l'installation complète à domicile. Le co
 pack sélectionné et son plan de plantation s'affichent sous la liste.</p>
 <div class="packs" role="radiogroup" aria-label="Choix du pack">
 <label class="opt"><input type="radio" name="pack" value="mini" data-prix="230" data-nom="Mini Aromatiques">
-<span class="prix">230&nbsp;€</span><h3>Mini Aromatiques</h3>
+<span class="prix">230&nbsp;€</span><h2>Mini Aromatiques</h2>
 <p>Bac compact sur pieds, 8 aromatiques méditerranéennes. Idéal balcon et terrasse.</p></label>
 <label class="opt"><input type="radio" name="pack" value="aromatiques" data-prix="355" data-nom="Aromatiques">
-<span class="prix">355&nbsp;€</span><h3>Aromatiques</h3>
-<p>Grand bac de 225&nbsp;cm, 8 aromatiques méditerranéennes vivaces.</p></label>
+<span class="prix">355&nbsp;€</span><h2>Aromatiques</h2>
+<p>Grand bac de 225&nbsp;cm, 12 aromatiques méditerranéennes vivaces.</p></label>
 <label class="opt"><input type="radio" name="pack" value="ete" data-prix="365" data-nom="Été Tardif">
-<span class="prix">365&nbsp;€</span><h3>Été Tardif</h3>
+<span class="prix">365&nbsp;€</span><h2>Été Tardif</h2>
 <p>Grand bac, 8 à 9 plants de saison à croissance rapide, pensé pour les installations d'été.</p></label>
 <label class="opt"><input type="radio" name="pack" value="tomates" data-prix="390" data-nom="Tomates" checked>
-<span class="prix">390&nbsp;€</span><h3>Tomates</h3>
+<span class="prix">390&nbsp;€</span><h2>Tomates</h2>
 <p>Grand bac, 4 variétés de tomates et 5 plants compagnons (poivrons, basilic, persil).</p></label>
 <label class="opt"><input type="radio" name="pack" value="mediterraneen" data-prix="400" data-nom="Méditerranéen">
-<span class="prix">400&nbsp;€</span><h3>Méditerranéen</h3>
+<span class="prix">400&nbsp;€</span><h2>Méditerranéen</h2>
 <p>Grand bac, 10 plants mêlant tomates, légumes et aromatiques. Le plus complet.</p></label>
 </div>
 </fieldset>
@@ -111,7 +113,7 @@ pack sélectionné et son plan de plantation s'affichent sous la liste.</p>
 <li><strong>Le bac.</strong> Bac sur pieds à 8 compartiments en sapin, 110 × 46 cm, 76 cm de haut : chaque aromatique a sa case, idéal balcon ou petite terrasse.</li>
 <li><strong>Le substrat.</strong> 100 L de substrat potager sans tourbe, adapté à la culture en bac et prêt à planter.</li>
 <li><strong>Les plants.</strong> 8 plants, une aromatique par compartiment : 1 thym, 1 estragon, 1 romarin, 1 sauge, 1 origan, 1 sarriette, 1 ciboulette et 1 basilic grand vert. Même sélection que le pack Aromatiques en format compact : chaque plant reste contenu dans sa case, parfait pour des récoltes d'appoint et une taille facile. Pour des quantités à cuisiner toute l'année, voir le pack Aromatiques grand format.</li>
-<li><strong>L'installation à domicile.</strong> Livraison, montage du bac, mise en place du substrat, plantation des 12 aromatiques selon le plan ci-dessous, étiquette à chaque case, conseils de démarrage et fiche d'entretien remise. Environ 45 minutes sur place, rien à préparer de votre côté.</li>
+<li><strong>L'installation à domicile.</strong> Livraison, montage du bac, mise en place du substrat, plantation des 8 aromatiques selon le plan ci-dessous, étiquette à chaque case, conseils de démarrage et fiche d'entretien remise. Environ 45 minutes sur place, rien à préparer de votre côté.</li>
 </ul>
 
 <h3>Plan de plantation, vue de dessus</h3>
@@ -124,7 +126,7 @@ pack sélectionné et son plan de plantation s'affichent sous la liste.</p>
 <li><strong>Le bac.</strong> Bac potager surélevé en sapin massif, 225 × 55 cm, 80 cm de haut : on jardine debout, sans se baisser.</li>
 <li><strong>Le substrat.</strong> 175 L de substrat potager sans tourbe, adapté à la culture en bac et prêt à planter.</li>
 <li><strong>Les plants.</strong> 12 plants choisis pour la chaleur, la sécheresse estivale et le soleil du 06 : thym, estragon, romarin, sauge, origan, sarriette, ciboulette, 2 basilics grand vert, persil plat, menthe (plantée dans son pot enterré pour rester à sa place) et verveine citronnelle. La différence avec le Mini : 12 plants au lieu de 8, chacun avec l'espace et la profondeur pour atteindre son plein développement et produire en quantité pour cuisiner régulièrement. Les vivaces (thym, estragon, romarin, sauge, origan, ciboulette, menthe, verveine) s'installent pour des années ; basilic et sarriette se replantent au printemps.</li>
-<li><strong>L'installation à domicile.</strong> Livraison, montage du bac, mise en place du substrat, plantation des 8 plants selon le plan ci-dessous, étiquette à chaque plant, conseils de démarrage et fiche d'entretien remise. Environ 1 h 15 sur place, rien à préparer de votre côté.</li>
+<li><strong>L'installation à domicile.</strong> Livraison, montage du bac, mise en place du substrat, plantation des 12 plants selon le plan ci-dessous, étiquette à chaque plant, conseils de démarrage et fiche d'entretien remise. Environ 1 h 15 sur place, rien à préparer de votre côté.</li>
 </ul>
 
 <h3>Plan de plantation, vue de dessus</h3>
@@ -175,15 +177,15 @@ pack sélectionné et son plan de plantation s'affichent sous la liste.</p>
 <legend>2. Vos options</legend>
 <p class="aide">Toutes les options sont posées lors de la même visite que l'installation du pack.</p>
 <label class="opt ligne"><input type="checkbox" id="opt-bac2">
-<span class="prix" id="prix-bac2">+360&nbsp;€</span><h3>Deuxième bac identique</h3>
+<span class="prix" id="prix-bac2">+360&nbsp;€</span><h2>Deuxième bac identique</h2>
 <p>Un second bac du même pack, installé lors de la même visite, avec 30&nbsp;€ de réduction
 sur ce deuxième bac.</p></label>
 <label class="opt ligne"><input type="checkbox" id="opt-arrosage">
-<span class="prix">+99&nbsp;€</span><h3>Arrosage automatique</h3>
+<span class="prix">+99&nbsp;€</span><h2>Arrosage automatique</h2>
 <p>Kit goutte à goutte complet avec programmateur, posé et réglé. Couvre jusqu'à deux bacs,
 robinet à 10&nbsp;m maximum du premier bac (au-delà, supplément de tuyau chiffré sur le devis).</p></label>
 <label class="opt ligne"><input type="checkbox" id="opt-entretien">
-<span class="prix">65&nbsp;€<small>par mois</small></span><h3>Forfait entretien mensuel</h3>
+<span class="prix">65&nbsp;€<small>par mois</small></span><h2>Forfait entretien mensuel</h2>
 <p>Une visite par mois : taille, arrosage si besoin, diagnostic parasites, fertilisation organique
 et compte-rendu par SMS. Sans engagement, facturé séparément chaque mois.</p></label>
 </fieldset>
@@ -206,6 +208,7 @@ du CGI, prix TTC. Livraison et installation incluses dans les Alpes-Maritimes.</
 </aside>
 </form>
 </div>
+</main>
 <footer class="site"><div class="wrap">
 <div><h4>Potager d'Azur</h4><p>Installation et entretien de potagers en bacs à domicile.
 Choix du bac, substrat sans tourbe, plants adaptés au climat, conseils de démarrage.</p></div>
