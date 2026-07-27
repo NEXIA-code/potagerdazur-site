@@ -1,5 +1,21 @@
 (function(){
 "use strict";
+/* apparition douce au défilement (sans JS : tout reste visible) */
+document.documentElement.classList.add('js');
+var rvs=document.querySelectorAll('.rv');
+if(rvs.length){
+  var reduit=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduit&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entrees){
+      entrees.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('vu');io.unobserve(en.target);}
+      });
+    },{rootMargin:'0px 0px -8% 0px'});
+    rvs.forEach(function(el){io.observe(el);});
+  }else{
+    rvs.forEach(function(el){el.classList.add('vu');});
+  }
+}
 /* menu mobile */
 var t=document.getElementById('nav-toggle'),nav=document.getElementById('nav-principal');
 if(t&&nav){
