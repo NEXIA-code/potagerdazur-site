@@ -107,7 +107,17 @@ if(barre){
       appliquerFiltres();
     });
   });
-  if(recherche){recherche.addEventListener('input',appliquerFiltres);}
+  if(recherche){
+    var q0=new URLSearchParams(location.search).get('q');
+    if(q0){recherche.value=q0;appliquerFiltres();}
+    recherche.addEventListener('input',function(){
+      appliquerFiltres();
+      var url=new URL(location.href);
+      if(recherche.value){url.searchParams.set('q',recherche.value);}
+      else{url.searchParams.delete('q');}
+      history.replaceState(null,'',url);
+    });
+  }
   var tri=document.getElementById('tri');
   if(tri){
     tri.addEventListener('change',function(){
