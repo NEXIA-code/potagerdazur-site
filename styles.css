@@ -105,7 +105,13 @@ padding:0 10px;font:inherit;font-size:.9rem;color:var(--text);cursor:pointer}
 background:var(--white);padding:0 16px;font:inherit;font-size:.9rem;color:var(--text);
 width:200px;max-width:40vw}
 .recherche input:focus{outline:2px solid var(--vert);outline-offset:1px}
-@media (max-width:640px){.recherche input{width:130px}}
+@media (max-width:640px){
+.toolbar .wrap{flex-wrap:wrap}
+.cats{flex:1 1 100%}
+.recherche{flex:1;padding-left:0;border-left:0}
+.recherche input{width:100%;max-width:none}
+.tri{padding-left:12px;border-left:1px solid var(--border)}
+}
 /* ---- sections catalogue ---- */
 section.cat{padding:40px 0 8px}
 section.cat[hidden]{display:none}
