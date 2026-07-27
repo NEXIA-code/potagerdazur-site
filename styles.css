@@ -96,6 +96,12 @@ padding-left:12px;border-left:1px solid var(--border)}
 .tri select{min-height:44px;border-radius:10px;border:1px solid var(--border);background:var(--white);
 padding:0 10px;font:inherit;font-size:.9rem;color:var(--text);cursor:pointer}
 @media (max-width:640px){.tri span{display:none}}
+.recherche{flex:none;padding-left:12px;border-left:1px solid var(--border)}
+.recherche input{min-height:44px;border-radius:var(--r-pill);border:1px solid var(--border);
+background:var(--white);padding:0 16px;font:inherit;font-size:.9rem;color:var(--text);
+width:200px;max-width:40vw}
+.recherche input:focus{outline:2px solid var(--vert);outline-offset:1px}
+@media (max-width:640px){.recherche input{width:130px}}
 /* ---- sections catalogue ---- */
 section.cat{padding:40px 0 8px}
 section.cat[hidden]{display:none}

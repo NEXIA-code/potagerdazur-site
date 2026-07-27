@@ -67,22 +67,38 @@ if(ov){
     if(e.key==='Escape'&&ov.classList.contains('ouvert'))fermer();
   });
 }
-/* catalogue : filtre par catégorie + tri par prix */
+/* catalogue : filtre par catégorie + recherche + tri par prix */
 var barre=document.getElementById('filtres-cats');
 if(barre){
   var boutons=barre.querySelectorAll('button[data-cat]');
   var sections=document.querySelectorAll('section.cat[data-cat]');
+  var recherche=document.getElementById('recherche-catalogue');
+  function appliquerFiltres(){
+    var actif=barre.querySelector('button.actif');
+    var cat=actif?actif.dataset.cat:'tous';
+    var q=(recherche?recherche.value:'').trim().toLowerCase();
+    sections.forEach(function(s){
+      var catOk=(cat==='tous'||s.dataset.cat===cat);
+      var visibles=0;
+      s.querySelectorAll('.carte').forEach(function(c){
+        var ok=catOk&&(!q||c.textContent.toLowerCase().indexOf(q)!==-1);
+        c.style.display=ok?'':'none';
+        if(ok)visibles++;
+      });
+      s.hidden=!catOk||visibles===0;
+    });
+  }
   boutons.forEach(function(b){
     b.addEventListener('click',function(){
       boutons.forEach(function(x){
-        var actif=(x===b);
-        x.classList.toggle('actif',actif);
-        x.setAttribute('aria-pressed',actif?'true':'false');
+        var a=(x===b);
+        x.classList.toggle('actif',a);
+        x.setAttribute('aria-pressed',a?'true':'false');
       });
-      var cat=b.dataset.cat;
-      sections.forEach(function(s){s.hidden=(cat!=='tous'&&s.dataset.cat!==cat);});
+      appliquerFiltres();
     });
   });
+  if(recherche){recherche.addEventListener('input',appliquerFiltres);}
   var tri=document.getElementById('tri');
   if(tri){
     tri.addEventListener('change',function(){
